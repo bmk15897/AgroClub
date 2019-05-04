@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div class="card text-center mx-auto col-6" style="width:400px">
+    <div class="card-title card-header">
+      <h2>Login</h2>
+    </div>
+    <form method="post">
+      <div class="card-body">
+        {% csrf_token %}
+        {{ form.as_p }}
+      </div>
+      <div class="card-footer">
+        <button type="submit" style="width:200px" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
